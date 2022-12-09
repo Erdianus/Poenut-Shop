@@ -28,7 +28,7 @@
                         <!-- / logo  -->
                         <!-- Login -->
                         <div class="aa-cartbox">
-                            <a class="aa-cart-link" data-toggle="modal" data-target="#login-modal">
+                            <a class="aa-cart-link" href="<?= site_url('auth') ?>">
                                 <span class="fa fa-sign-in"></span>
                                 <span class="aa-cart-title">LOGIN</span>
                             </a>
@@ -56,11 +56,19 @@
         <div class="menu-area">
             <!-- Navbar -->
             <div class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
                 <div class="navbar-collapse collapse">
                     <!-- Left nav -->
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Skin Care <span class="caret"></span></a>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Skincare <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Casual</a></li>
                                 <li><a href="#">Sports</a></li>
@@ -72,27 +80,22 @@
                                 <li><a href="#">Trousers</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Body Care <span class="caret"></span></a>
+                        <li><a href="#">Bodycare <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Kurta & Kurti</a></li>
-                                <li><a href="#">Trousers</a></li>
-                                <li><a href="#">Casual</a></li>
-                                <li><a href="#">Sports</a></li>
-                                <li><a href="#">Formal</a></li>
-                                <li><a href="#">Sarees</a></li>
-                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Camera</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Tablet</a></li>
+                                <li><a href="#">Laptop</a></li>
+                                <li><a href="#">Accesories</a></li>
                             </ul>
                         </li>
-                        <li><a href="#"> Hair Care <span class="caret"></span></a>
+                        <li><a href="#">Haircare <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Casual</a></li>
-                                <li><a href="#">Sports</a></li>
-                                <li><a href="#">Formal</a></li>
-                                <li><a href="#">Standard</a></li>
-                                <li><a href="#">T-Shirts</a></li>
-                                <li><a href="#">Shirts</a></li>
-                                <li><a href="#">Jeans</a></li>
-                                <li><a href="#">Trousers</a></li>
+                                <li><a href="#">Camera</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Tablet</a></li>
+                                <li><a href="#">Laptop</a></li>
+                                <li><a href="#">Accesories</a></li>
                             </ul>
                         </li>
                     </ul>

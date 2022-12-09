@@ -1,5 +1,4 @@
 <main id="main" class="main">
-
     <div class="pagetitle">
         <h1>Dashboard</h1>
         <nav>
@@ -179,5 +178,5 @@
             <!-- End Left side columns -->
         </div>
     </section>
-
-</main><!-- End #main -->
+</main>
+<!-- End #main -->

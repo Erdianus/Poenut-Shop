@@ -14,7 +14,8 @@
                         <div class="seq-title">
                             <span data-seq>Save Up to 75% Off</span>
                             <h2 data-seq>Men Collection</h2>
-                            <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                            <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum
+                                dsfsadasdfasdfsdfasfdsd.</p>
                         </div>
                     </li>
                     <!-- single slide item -->
@@ -41,130 +42,47 @@
     </div>
 </section>
 <!-- / slider -->
-<!-- Products section -->
-<section id="aa-product">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="aa-product-area">
-                        <div class="aa-product-inner">
-                            <!-- start prduct navigation -->
-                            <ul class="nav nav-tabs aa-products-tab">
-                                <li class="active"><a href="#Skincare" data-toggle="tab">Skincare</a></li>
-                                <li><a href="#Bodycare" data-toggle="tab">Body Care</a></li>
-                                <li><a href="#Haircare" data-toggle="tab">Hair Care</a></li>
-                            </ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <!-- Start skincare product category -->
-                                <div class="row tab-pane fade in active" id="Skincare">
-                                    <ul class="aa-product-catg">
-                                        <!-- start single product item -->
-                                        <li>
-                                            <figure>
-                                                <a class="aa-product-img" href="#"><img
-                                                        src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                                        alt="polo shirt img"></a>
-                                                <a class="aa-add-card-btn" href="#"><span
-                                                        class="fa fa-shopping-cart"></span>Add To Cart</a>
-                                                <figcaption>
-                                                    <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
-                                                    <span class="aa-product-price">$45.50</span><span
-                                                        class="aa-product-price"><del>$65.50</del></span>
-                                                </figcaption>
-                                            </figure>
-                                            <div class="aa-product-hvr-content">
-                                                <a href="#" data-toggle="tooltip" data-placement="top"
-                                                    title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="top"
-                                                    title="Compare"><span class="fa fa-exchange"></span></a>
-                                                <a href="#" data-toggle2="tooltip" data-placement="top"
-                                                    title="Quick View" data-toggle="modal"
-                                                    data-target="#quick-view-modal"><span
-                                                        class="fa fa-search"></span></a>
-                                            </div>
-                                            <!-- product badge -->
-                                            <span class="aa-badge aa-sale" href="#">SALE!</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /skincare product category -->
-                                <!-- Start bodycare product category -->
-                                <div class="tab-pane fade" id="Bodycare">
-                                    <ul class="aa-product-catg">
-                                        <!-- start single product item -->
-                                        <li>
-                                            <figure>
-                                                <a class="aa-product-img" href="#"><img
-                                                        src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                                        alt="polo shirt img"></a>
-                                                <a class="aa-add-card-btn" href="#"><span
-                                                        class="fa fa-shopping-cart"></span>Add To Cart</a>
-                                                <figcaption>
-                                                    <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
-                                                    <span class="aa-product-price">$45.50</span><span
-                                                        class="aa-product-price"><del>$65.50</del></span>
-                                                </figcaption>
-                                            </figure>
-                                            <div class="aa-product-hvr-content">
-                                                <a href="#" data-toggle="tooltip" data-placement="top"
-                                                    title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="top"
-                                                    title="Compare"><span class="fa fa-exchange"></span></a>
-                                                <a href="#" data-toggle2="tooltip" data-placement="top"
-                                                    title="Quick View" data-toggle="modal"
-                                                    data-target="#quick-view-modal"><span
-                                                        class="fa fa-search"></span></a>
-                                            </div>
-                                            <!-- product badge -->
-                                            <span class="aa-badge aa-sale" href="#">SALE!</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /bodycare product category -->
-                                <!-- start sports product category -->
-                                <div class="tab-pane fade" id="Haircare">
-                                    <ul class="aa-product-catg">
-                                        <!-- start single product item -->
-                                        <li>
-                                            <figure>
-                                                <a class="aa-product-img" href="#"><img
-                                                        src="<?= base_url('assets/'); ?>img/sports/sport-1.png"
-                                                        alt="polo shirt img"></a>
-                                                <a class="aa-add-card-btn" href="#"><span
-                                                        class="fa fa-shopping-cart"></span>Add To Cart</a>
-                                                <figcaption>
-                                                    <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
-                                                    <span class="aa-product-price">$45.50</span><span
-                                                        class="aa-product-price"><del>$65.50</del></span>
-                                                </figcaption>
-                                            </figure>
-                                            <div class="aa-product-hvr-content">
-                                                <a href="#" data-toggle="tooltip" data-placement="top"
-                                                    title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
-                                                <a href="#" data-toggle="tooltip" data-placement="top"
-                                                    title="Compare"><span class="fa fa-exchange"></span></a>
-                                                <a href="#" data-toggle2="tooltip" data-placement="top"
-                                                    title="Quick View" data-toggle="modal"
-                                                    data-target="#quick-view-modal"><span
-                                                        class="fa fa-search"></span></a>
-                                            </div>
-                                            <!-- product badge -->
-                                            <span class="aa-badge aa-sale" href="#">SALE!</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- / sports product category -->
-                            </div>
+
+<section id="product">
+    <div class="container p-product">
+        <h2 class="text-center mt-3">PRODUCT TYPE</h2>
+        <div class="row product-area">
+            <div class=" col-md-4 col-sm-12 product-type">
+                <a href="#">
+                    <div class="container-product">
+                        <img src="https://images.unsplash.com/photo-1633423411797-9a7317784d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">Skincare</div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </div>e
+            <div class="col-md-4 col-sm-12 product-type">
+                <a href="">
+                    <div class="container-product">
+                        <img src="https://images.unsplash.com/photo-1633423411797-9a7317784d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">Bodycare</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-12 product-type">
+                <a href="">
+                    <div class="container-product">
+                        <img src="https://images.unsplash.com/photo-1633423411797-9a7317784d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">Haircare</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
-<!-- / Products section -->
 
 <!-- Support section -->
 <section id="aa-support">
@@ -212,7 +130,9 @@
                         <!-- single slide -->
                         <li>
                             <div class="aa-testimonial-single">
-                                <img class="aa-testimonial-img" src="img/testimonial-img-2.jpg" alt="testimonial img">
+                                <img class="aa-testimonial-img"
+                                    src="<?= base_url('assets/admin/') ?>assets/img/profile-img.jpg"
+                                    alt="testimonial img">
                                 <span class="fa fa-quote-left aa-testimonial-quote"></span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis
                                     possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis
@@ -227,7 +147,9 @@
                         <!-- single slide -->
                         <li>
                             <div class="aa-testimonial-single">
-                                <img class="aa-testimonial-img" src="img/testimonial-img-1.jpg" alt="testimonial img">
+                                <img class="aa-testimonial-img"
+                                    src="<?= base_url('assets/admin/') ?>assets/img/profile-img.jpg"
+                                    alt="testimonial img">
                                 <span class="fa fa-quote-left aa-testimonial-quote"></span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis
                                     possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis
@@ -242,7 +164,9 @@
                         <!-- single slide -->
                         <li>
                             <div class="aa-testimonial-single">
-                                <img class="aa-testimonial-img" src="img/testimonial-img-3.jpg" alt="testimonial img">
+                                <img class="aa-testimonial-img"
+                                    src="<?= base_url('assets/admin/') ?>assets/img/profile-img.jpg"
+                                    alt="testimonial img">
                                 <span class="fa fa-quote-left aa-testimonial-quote"></span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis
                                     possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis
@@ -257,7 +181,9 @@
                         <!-- single slide -->
                         <li>
                             <div class="aa-testimonial-single">
-                                <img class="aa-testimonial-img" src="img/testimonial-img-3.jpg" alt="testimonial img">
+                                <img class="aa-testimonial-img"
+                                    src="<?= base_url('assets/admin/') ?>assets/img/profile-img.jpg"
+                                    alt="testimonial img">
                                 <span class="fa fa-quote-left aa-testimonial-quote"></span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis
                                     possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis
@@ -276,29 +202,7 @@
     </div>
 </section>
 <!-- / Testimonial -->
-<!-- Modal Login-->
-<div class="modal fade w-50" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Login</h3>
-            </div>
-            <form class="aa-login-form" action="">
-                <div class="modal-body">
-                    <label for="">Username or Email address<span>*</span></label>
-                    <input type="text" placeholder="Username or email">
-                    <label for="">Password<span>*</span></label>
-                    <input type="password" placeholder="Password">
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+
 </body>
 
 </html>

@@ -11,6 +11,7 @@
     <link href="<?= base_url('assets/') ?>css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="<?= base_url('assets/') ?>css/bootstrap.css" rel="stylesheet">
+    <link href="<?= base_url('assets/') ?>css/bootstrap5.css" rel="stylesheet">
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
     <link href="<?= base_url('assets/') ?>css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
     <!-- Product view slider -->
