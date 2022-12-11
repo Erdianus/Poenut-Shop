@@ -26,7 +26,7 @@ class Auth extends CI_Controller
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
-            $cek = $this->users->cek_login($username, $password);
+            $cek = $this->user_m->cek_login($username, $password);
             if ($cek == false) {
                 $this->session->set_flashdata('message', '
                     <div class="alert alert-danger" role="alert">

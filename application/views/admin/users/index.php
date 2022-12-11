@@ -20,9 +20,11 @@
 
                             <div class="card-body">
                                 <h5 class="card-title"> Users Table</h5>
-                                <a href="<?= base_url('users/tambah') ?>">
-                                    <button class="btn btn-primary">Tambah User</button>
+                                <a href="<?= site_url('users/create') ?>">
+                                    <button class="btn btn-primary btn-sm mb-3"><i class="bi bi-plus"></i> Tambah
+                                        User</button>
                                 </a>
+                                <?= $this->session->flashdata('message') ?>
 
                                 <table class="table table-borderless datatable">
                                     <thead>
@@ -35,13 +37,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        foreach ($users as $no => $user) : ?>
                                         <tr>
-                                            <th scope="row"><a href="#">#2457</a></th>
-                                            <td>Brandon Jacob</td>
-                                            <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                            <td>$64</td>
-                                            <td><span class="badge bg-success">Approved</span></td>
+                                            <th scope="row"><?= $no + 1 ?></th>
+                                            <td><?= $user['username'] ?></td>
+                                            <td><?= $user['nama'] ?></td>
+                                            <td><?= $user['role_id'] == 1 ? 'Admin' : 'Pegawai' ?></td>
+                                            <td>
+                                                <a href="<?= site_url('users/show/' . $user['id']) ?>"><button
+                                                        class="btn btn-success btn-sm"><i class="bi bi-eye"></i>
+                                                        Lihat</button></a>
+                                                <a href="<?= site_url('users/edit/' . $user['id']) ?>"><button
+                                                        class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i>
+                                                        Edit</button></a>
+                                                <a href="<?= site_url('users/destroy/' . $user['id']) ?>"><button
+                                                        class="btn btn-danger btn-sm"><i class="bi bi-trash"></i>
+                                                        Hapus</button></a>
+                                            </td>
                                         </tr>
+                                        <?php
+                                        endforeach ?>
                                     </tbody>
                                 </table>
 

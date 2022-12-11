@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="index.html">
+            <a class="nav-link " href="<?= site_url('dashboard') ?>">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -16,17 +16,17 @@
             </a>
             <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="#">
+                    <a href="<?= site_url('dashboard/skincare') ?>">
                         <i class="bi bi-circle"></i><span>Skincare</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="<?= site_url('dashboard/bodycare') ?>">
                         <i class="bi bi-circle"></i><span>Bodycare</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="<?= site_url('dashboard/haircare') ?>">
                         <i class="bi bi-circle"></i><span>Haircare</span>
                     </a>
                 </li>
@@ -36,7 +36,7 @@
         <li class="nav-heading">Pages</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="<?= site_url('dashboard/users') ?>">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
             </a>

@@ -3,12 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller
 {
-    public function templates($template)
+    public function templates($template, ...$data)
     {
         $this->load->view('admin/templates/header');
         $this->load->view('admin/templates/navbar');
         $this->load->view('admin/templates/sidebar');
-        $this->load->view($template);
+        $this->load->view($template, $data);
         $this->load->view('admin/templates/footer');
         $this->load->view('admin/templates/js');
     }
@@ -20,7 +20,8 @@ class Dashboard extends CI_Controller
 
     public function users()
     {
-        $this->templates('admin/users/index');
+        $data['users'] = $this->user_m->get_data();
+        $this->templates('admin/users/index', ...$data);
     }
 
     public function skincare()
