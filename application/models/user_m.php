@@ -3,16 +3,6 @@ defined('BASEPATH') or exit('Not Allowed Direct Access');
 
 class User_m extends CI_Model
 {
-    public function cek_login($username, $password)
-    {
-        $result = $this->db->where('username', $username)->where('password', $password)->limit(1)->get('users');
-        if ($result->num_rows() > 0) {
-            return $result->row();
-        } else {
-            return false;
-        }
-    }
-
     public function get_data()
     {
         return $this->db->get('users')->result_array();
@@ -29,6 +19,15 @@ class User_m extends CI_Model
         $this->db->select("*");
         $this->db->from('users');
         $this->db->where('id', $id);
+        $get = $this->db->get();
+        return $get->result_array();
+    }
+
+    public function detailByLogin($username)
+    {
+        $this->db->select("*");
+        $this->db->from('users');
+        $this->db->where('username', $username);
         $get = $this->db->get();
         return $get->result_array();
     }

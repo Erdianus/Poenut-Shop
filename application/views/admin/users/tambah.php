@@ -13,11 +13,13 @@
                         <label for="nama" class="form-label">Nama Lengkap</label>
                         <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap Anda"
                             required>
+                        <?= form_error('nama'); ?>
                     </div>
                     <div class="col-12">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" name="username" placeholder="Username"
                             required>
+                        <?= form_error('username'); ?>
                     </div>
                     <div class="col-12">
                         <label for="role" class="form-label">Role</label>
@@ -25,16 +27,19 @@
                             <option selected value="2">Pegawai</option>
                             <option value="1">Admin</option>
                         </select>
+                        <?= form_error('role_id'); ?>
                     </div>
                     <div class="col-6">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Password"
                             required>
+                        <?= form_error('password'); ?>
                     </div>
                     <div class="col-6">
                         <label for="konfirPass" class="form-label">Konfirmasi Password</label>
                         <input type="password" class="form-control" id="konfirPass" name="konfirPass"
                             placeholder="Konfirmasi Password" required>
+                        <?= form_error('konfirPass'); ?>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>

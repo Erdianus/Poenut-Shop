@@ -4,12 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Auth extends CI_Controller
 {
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->library('form_validation');
-    }
-
     public function index()
     {
         $this->load->view('landing_page/templates/header');
@@ -18,7 +12,7 @@ class Auth extends CI_Controller
     }
     public function login()
     {
-        $this->form_validation->set_rules('username', 'Email', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         if ($this->form_validation->run() == false) {
             redirect('auth');
@@ -26,25 +20,39 @@ class Auth extends CI_Controller
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
-            $cek = $this->user_m->cek_login($username, $password);
-            if ($cek == false) {
-                $this->session->set_flashdata('message', '
-                    <div class="alert alert-danger" role="alert">
-                        Username atau password anda salah
-                    </div>');
-                redirect('auth');
-            } else {
-                switch ($cek->role_id) {
-                    case 1:
-                        redirect('dashboard');
-                        break;
-                    case 2:
-                        redirect('dashboard');
-                        break;
-                    default:
-                        break;
+            // select * from login where user = ?
+            $cek  = $this->db->get_where('users', ['username' => $username])->row_array();
+            // cek username
+            if ($cek) {
+                if (password_verify($password, $cek['password'])) {
+                    // membuat session
+                    $session = array(
+                        'id'        => $cek['id'],
+                        'username'  => $cek['username'],
+                        'nama'      => $cek['nama'],
+                        'role_id'   => $cek['role_id'],
+                        'logged_in' => TRUE
+                    );
+                    $this->session->set_userdata($session);
+
+                    // redirect ke admin
+                    redirect('dashboard');
+                } else {
+                    // jika password salah
+                    $this->session->set_flashdata('message', 'password salah');
+                    redirect('auth');
                 }
+            } else {
+                // jika username salah
+                $this->session->set_flashdata('message', 'username salah');
+                redirect('auth');
             }
         }
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('logged_in');
+        redirect('auth');
     }
 }

@@ -1,9 +1,9 @@
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Bodycare Menu</h1>
+        <h1>Skincare Menu</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Bodycare</a></li>
+                <li class="breadcrumb-item"><a href="#">Skincare</a></li>
                 <li class="breadcrumb-item active">Home</li>
             </ol>
         </nav>
@@ -19,10 +19,11 @@
                         <div class="card recent-sales overflow-auto">
 
                             <div class="card-body">
-                                <h5 class="card-title"> Bodycare Table</h5>
-                                <a href="<?= base_url('users/tambah') ?>">
+                                <h5 class="card-title"> Skincare Table</h5>
+                                <a href="<?= site_url('produk/createSkincare') ?>">
                                     <button class="btn btn-primary btn-sm mb-3">Tambah Produk</button>
                                 </a>
+                                <?= $this->session->flashdata('message') ?>
 
                                 <table class="table table-borderless datatable">
                                     <thead>
@@ -35,17 +36,28 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        foreach ($produk as $no => $skincare) : ?>
                                         <tr>
-                                            <th scope="row"><a href="#">#2457</a></th>
-                                            <td>Brandon Jacob</td>
-                                            <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                            <td>$64</td>
+                                            <th scope="row"><?= $no + 1 ?></th>
+                                            <td><?= $skincare['nama_produk'] ?></td>
+                                            <td><?= $skincare['stok'] ?></td>
+                                            <td><?= $skincare['status'] ?></td>
                                             <td>
-                                                <a href="#"><button class="btn btn-success btn-sm">Lihat</button></a>
-                                                <a href="#"><button class="btn btn-warning btn-sm">Edit</button></a>
-                                                <a href="#"><button class="btn btn-danger btn-sm">Hapus</button></a>
+                                                <a href="<?= site_url('produk/show/' . $skincare['id']) ?>"><button
+                                                        class="btn btn-success btn-sm"><i class="bi bi-eye"></i>
+                                                        Lihat</button></a>
+                                                <a href="<?= site_url('produk/edit/' .  $skincare['id']) ?>"><button
+                                                        class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i>
+                                                        Edit</button></a>
+                                                <a onclick="return confirm('Yakin ingin menghapus produk ini?')"
+                                                    href="<?= site_url('produk/destroy/' .  $skincare['id']) ?>"><button
+                                                        class="btn btn-danger btn-sm"><i class="bi bi-trash"></i>
+                                                        Hapus</button></a>
                                             </td>
                                         </tr>
+                                        <?php
+                                        endforeach ?>
                                     </tbody>
                                 </table>
 
@@ -60,4 +72,4 @@
         </div>
     </section>
 </main>
-<!-- End #main -->
+<!-- End #mainSkin
