@@ -19,7 +19,7 @@
                         <!-- logo  -->
                         <div class="aa-logo">
                             <!-- Text based logo -->
-                            <a href="#">
+                            <a href="<?= site_url() ?>">
                                 <p>Poenut<strong>Shop</strong> <span>Your Skincare Shop</span></p>
                             </a>
                             <!-- img based logo -->
@@ -34,14 +34,6 @@
                             </a>
                         </div>
                         <!-- / Login -->
-                        <!-- search box -->
-                        <div class="aa-search-box">
-                            <form action="">
-                                <input type="text" name="" id="" placeholder="Search here ex. 'man' ">
-                                <button type="submit"><span class="fa fa-search"></span></button>
-                            </form>
-                        </div>
-                        <!-- / search box -->
                     </div>
                 </div>
             </div>
@@ -50,59 +42,3 @@
     <!-- / header bottom  -->
 </header>
 <!-- / header section -->
-<!-- menu -->
-<section id="menu">
-    <div class="container">
-        <div class="menu-area">
-            <!-- Navbar -->
-            <div class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <!-- Left nav -->
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Skincare <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Casual</a></li>
-                                <li><a href="#">Sports</a></li>
-                                <li><a href="#">Formal</a></li>
-                                <li><a href="#">Standard</a></li>
-                                <li><a href="#">T-Shirts</a></li>
-                                <li><a href="#">Shirts</a></li>
-                                <li><a href="#">Jeans</a></li>
-                                <li><a href="#">Trousers</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Bodycare <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Camera</a></li>
-                                <li><a href="#">Mobile</a></li>
-                                <li><a href="#">Tablet</a></li>
-                                <li><a href="#">Laptop</a></li>
-                                <li><a href="#">Accesories</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Haircare <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Camera</a></li>
-                                <li><a href="#">Mobile</a></li>
-                                <li><a href="#">Tablet</a></li>
-                                <li><a href="#">Laptop</a></li>
-                                <li><a href="#">Accesories</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- / menu -->

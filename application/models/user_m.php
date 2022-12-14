@@ -43,4 +43,11 @@ class User_m extends CI_Model
         $this->db->delete('users', array('id' => $id));
         return $this->db->affected_rows();
     }
+
+    public function countPegawai()
+    {
+        $this->db->like('role_id', 2);
+        $this->db->from('users');
+        return $this->db->count_all_results();
+    }
 }

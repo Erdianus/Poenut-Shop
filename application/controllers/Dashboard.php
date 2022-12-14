@@ -24,6 +24,14 @@ class Dashboard extends CI_Controller
     public function index()
     {
         $data['sidebar'] = 'dashboard';
+        $data['totalProduct'] = $this->produk_m->countAll();
+        $data['totalSkincare'] = $this->produk_m->countSkincare();
+        $data['totalBodycare'] = $this->produk_m->countBodycare();
+        $data['totalHaircare'] = $this->produk_m->countHaircare();
+        $data['totalHaircare'] = $this->produk_m->countHaircare();
+        $data['pegawai'] = $this->user_m->countPegawai();
+        $this->db->from('hero');
+        $data['hero'] = $this->db->count_all_results();
         $this->templates('admin/dashboard', ...$data);
     }
 
@@ -64,9 +72,12 @@ class Dashboard extends CI_Controller
 
     public function hero()
     {
-        $data['produk'] = $this->produk_m->get_dataProduk(3);
+        $this->db->select("*");
+        $this->db->from('hero');
+        $get = $this->db->get();
+        $data['hero'] = $get->result_array();
         $data['sidebar'] = 'hero';
-        $this->templates('admin/hero', ...$data);
+        $this->templates('admin/hero/hero', ...$data);
     }
 
     public function approval()

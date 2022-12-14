@@ -36,24 +36,6 @@ class Produk_m extends CI_Model
         return $get->result_array();
     }
 
-    // public function updateProduk($data, $id)
-    // {
-    //     if ($data['file_gambar'] == '') {
-    //         $this->db->set('nama_produk', $data['nama_produk']);
-    //         $this->db->set('deskripsi', $data['deskripsi']);
-    //         $this->db->set('stok', $data['stok']);
-    //         $this->db->set('harga', $data['harga']);
-    //         $this->db->set('jenis_id', $data['jenis_id']);
-    //         $this->db->set('status', $data['status']);
-    //         $this->db->set('dibuat_oleh', $data['dibuat_oleh']);
-    //     } else {
-    //         $this->db->set('file_gmbr', $data['file_gmbr']);
-    //     }
-    //     $this->db->where('id', $id);
-    //     $this->db->update('product');
-    //     return $this->db->affected_rows();
-    // }
-
     public function deleteProduk($id)
     {
         $this->db->delete('product', array('id' => $id));
@@ -88,5 +70,32 @@ class Produk_m extends CI_Model
         INNER JOIN jenis_produk
         ON product.jenis_id = jenis_produk.id;');
         $this->db->get()->result_array();
+    }
+
+    public function countAll()
+    {
+        $this->db->from('product');
+        return $this->db->count_all_results();
+    }
+
+    public function countSkincare()
+    {
+        $this->db->like('jenis_id', 1);
+        $this->db->from('product');
+        return $this->db->count_all_results();
+    }
+
+    public function countBodycare()
+    {
+        $this->db->like('jenis_id', 2);
+        $this->db->from('product');
+        return $this->db->count_all_results();
+    }
+
+    public function countHaircare()
+    {
+        $this->db->like('jenis_id', 3);
+        $this->db->from('product');
+        return $this->db->count_all_results();
     }
 }

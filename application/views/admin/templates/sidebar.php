@@ -38,7 +38,7 @@
             </ul>
         </li><!-- End Icons Nav -->
 
-        <li class="nav-item">
+        <li <?= $this->session->userdata('role_id') == 2 ? 'hidden' : '' ?> class="nav-item">
             <a class="nav-link <?= $sidebar == 'users' ? '' : 'collapsed' ?>" href="<?= site_url('dashboard/users') ?>">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
@@ -51,7 +51,7 @@
                 <span>Hero Settings</span>
             </a>
         </li>
-        <li class="nav-item">
+        <li <?= $this->session->userdata('role_id') == 2 ? 'hidden' : '' ?> class="nav-item">
             <a class="nav-link <?= $sidebar == 'approval' ? '' : 'collapsed' ?>"
                 href="<?= site_url('dashboard/approval') ?>">
                 <i class="bi bi-ui-checks"></i>

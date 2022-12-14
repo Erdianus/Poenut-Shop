@@ -5,32 +5,18 @@
             <div class="seq-screen">
                 <ul class="seq-canvas">
                     <!-- single slide item -->
+                    <?php foreach ($hero as $value) : ?>
                     <li>
                         <div class="seq-model">
-                            <img class="hero" data-seq
-                                src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="Men slide img" />
-                        </div>
-                        <div class="seq-title">
-                            <span data-seq>Save Up to 75% Off</span>
-                            <h2 data-seq>Men Collection</h2>
-                            <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum
-                                dsfsadasdfasdfsdfasfdsd.</p>
-                        </div>
-                    </li>
-                    <!-- single slide item -->
-                    <li>
-                        <div class="seq-model">
-                            <img class="hero" data-seq
-                                src="https://images.unsplash.com/photo-1633423411797-9a7317784d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            <img class="hero" data-seq src="<?= base_url('assets/hero/') . $value['gambar'] ?>"
                                 alt="Wristwatch slide img" />
                         </div>
                         <div class="seq-title">
-                            <span data-seq>Save Up to 40% Off</span>
-                            <h2 data-seq>Wristwatch Collection</h2>
-                            <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                            <h2 data-seq><?= $value['title'] ?></h2>
+                            <p data-seq><?= $value['subtitle'] ?></p>
                         </div>
                     </li>
+                    <?php endforeach ?>
                 </ul>
             </div>
             <!-- slider navigation btn -->
@@ -48,10 +34,9 @@
         <h2 class="text-center mt-3">PRODUCT TYPE</h2>
         <div class="row product-area">
             <div class=" col-md-4 col-sm-12 product-type">
-                <a href="#">
+                <a href="<?= site_url('landingpage/skincare') ?>">
                     <div class="container-product">
-                        <img src="https://images.unsplash.com/photo-1633423411797-9a7317784d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                            alt="Avatar" class="image">
+                        <img src="<?= base_url('assets/img/products/skincare.jpg') ?>" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Skincare</div>
                         </div>
@@ -59,10 +44,9 @@
                 </a>
             </div>
             <div class="col-md-4 col-sm-12 product-type">
-                <a href="">
+                <a href="<?= site_url('landingpage/bodycare') ?>">
                     <div class="container-product">
-                        <img src="https://images.unsplash.com/photo-1633423411797-9a7317784d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                            alt="Avatar" class="image">
+                        <img src="<?= base_url('assets/img/products/bodycare.jpg') ?>" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Bodycare</div>
                         </div>
@@ -70,10 +54,9 @@
                 </a>
             </div>
             <div class="col-md-4 col-sm-12 product-type">
-                <a href="">
+                <a href="<?= site_url('landingpage/haircare') ?>">
                     <div class="container-product">
-                        <img src="https://images.unsplash.com/photo-1633423411797-9a7317784d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                            alt="Avatar" class="image">
+                        <img src="<?= base_url('assets/img/products/haircare.jpg') ?>" class="image">
                         <div class="overlay">
                             <div class="text">Haircare</div>
                         </div>

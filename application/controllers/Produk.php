@@ -171,6 +171,7 @@ class Produk extends CI_Controller
                     redirect('produk/edit/' . $id);
                 } else {
                     $gambar = $this->upload->data('file_name');
+                    $this->db->set('file_gmbr', $gambar);
                 }
             }
             $this->db->set('nama_produk', $this->input->post('nama_produk'));
